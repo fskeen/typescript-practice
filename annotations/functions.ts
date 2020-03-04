@@ -37,3 +37,24 @@ const throwErr2 = (message: string): string => {
   }
   return message;
 };
+
+/** ////////////////////////////////////////////// */
+
+const todaysWeather = {
+  date: new Date(),
+  weather: "sunny"
+};
+
+const logWeather = ({
+  date,
+  weather
+}: {
+  date: Date;
+  weather: string;
+}): void => {
+  // this line above uses TS with es5 destructuring to pull out only the values we need
+  console.log(date);
+  console.log(weather);
+};
+
+logWeather(todaysWeather);
